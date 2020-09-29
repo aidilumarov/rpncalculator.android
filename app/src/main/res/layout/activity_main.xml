@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewLayer.CalculatorViewActivity"
+    android:background="@android:color/background_dark">
+
+    // Top container
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_margin="10sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        // Expression text view
+        <TextView
+            android:id="@+id/textview_expressionOutput"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:gravity="end|bottom"
+            android:textSize="30sp"
+            android:textColor="@color/colorWhite"
+            android:text="" />
+
+        // Result text view
+        <TextView
+            android:id="@+id/textview_resultOutput"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:gravity="end|center_vertical"
+            android:textSize="30sp"
+            android:textColor="@color/colorOrange"
+            android:text=""/>
+
+        // Top row
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/button_clearScreen"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorTeal"
+                android:textSize="30sp"
+                android:text="@string/clear"/>
+
+            <TextView
+                android:id="@+id/button_openBrackets"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorTeal"
+                android:textSize="30sp"
+                android:text="@string/openingBrackets"/>
+
+            <TextView
+                android:id="@+id/button_closeBrackets"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorTeal"
+                android:textSize="30sp"
+                android:text="@string/closingBrackets"/>
+
+            <TextView
+                android:id="@+id/button_power"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorOrange"
+                android:textSize="30sp"
+                android:text="@string/operatorPower"/>
+
+
+        </LinearLayout>
+
+        // Second row
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/button_seven"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/seven"/>
+
+            <TextView
+                android:id="@+id/button_eight"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/eight"/>
+
+            <TextView
+                android:id="@+id/button_nine"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/nine"/>
+
+            <TextView
+                android:id="@+id/button_divide"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorOrange"
+                android:textSize="30sp"
+                android:text="@string/operatorDivide"/>
+
+
+        </LinearLayout>
+
+        // Third row
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/button_four"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/four"/>
+
+            <TextView
+                android:id="@+id/button_five"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/five"/>
+
+            <TextView
+                android:id="@+id/button_six"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/six"/>
+
+            <TextView
+                android:id="@+id/button_multiply"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorOrange"
+                android:textSize="30sp"
+                android:text="@string/operatorMultiply"/>
+
+        </LinearLayout>
+
+        // Fourth row
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/button_one"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/one"/>
+
+            <TextView
+                android:id="@+id/button_two"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/two"/>
+
+            <TextView
+                android:id="@+id/button_three"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/three"/>
+
+            <TextView
+                android:id="@+id/button_minus"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorOrange"
+                android:textSize="30sp"
+                android:text="@string/operatorMinus"/>
+
+        </LinearLayout>
+
+        // Fifth row
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3">
+
+            <TextView
+                android:id="@+id/button_zero"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/zero"/>
+
+            <TextView
+                android:id="@+id/button_point"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                android:text="@string/point"/>
+
+            <TextView
+                android:id="@+id/button_calculate"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorTeal"
+                android:textSize="30sp"
+                android:text="@string/calculate"/>
+
+            <TextView
+                android:id="@+id/button_plus"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="@color/colorOrange"
+                android:textSize="30sp"
+                android:text="@string/operatorPlus"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
