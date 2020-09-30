@@ -1,10 +1,11 @@
-package com.aidilumarov.rpncalculator.ModelLayer;
+package com.aidilumarov.rpncalculator.ModelLayer.core;
 
+import com.aidilumarov.rpncalculator.ModelLayer.core.interfaces.IRPNCalculator;
 import java.lang.IllegalArgumentException;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-public class RPNCalculator {
+public class RPNCalculator implements IRPNCalculator {
 
     private final String PLUS = "+";
     private final String MINUS = "-";

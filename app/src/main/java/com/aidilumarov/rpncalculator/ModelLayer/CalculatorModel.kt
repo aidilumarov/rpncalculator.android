@@ -1,8 +1,12 @@
 package com.aidilumarov.rpncalculator.ModelLayer
 
-import android.view.View
+import android.content.Context
+import android.content.res.AssetManager
 import android.widget.TextView
+import com.aidilumarov.rpncalculator.ModelLayer.core.CalculatorAction
+import com.aidilumarov.rpncalculator.ModelLayer.core.InputProcessor
 import com.aidilumarov.rpncalculator.ViewLayer.CalculatorViewActivity
+import java.util.*
 
 public class CalculatorModel {
 
@@ -16,18 +20,15 @@ public class CalculatorModel {
 
     public constructor(calculatorView: CalculatorViewActivity) {
         this.calculatorView = calculatorView
-        inputProcessor = InputProcessor(calculatorView)
+        inputProcessor = InputProcessor()
     }
 
-    public fun updateOutputViewsBasedOnClick(clickableView: TextView?) {
-        if (clickableView == null) {
-            return
-        }
+    public fun updateOutputViewsBasedOnClick(action: CalculatorAction) {
 
-        var updatedOutput = inputProcessor.getUpdatedOutputBasedOnClick(clickableView)
+        var updatedOutput = inputProcessor.getUpdatedOutputBasedOnClick(action)
         clearOutput(calculatorView.resultView)
 
-        if (clickableView == calculatorView.buttonCalculate) {
+        if (action == CalculatorAction.CALCULATE) {
             calculatorView.resultView.text = updatedOutput.expression
 
             if (updatedOutput.expression == INVALID_EXPRESSION) {

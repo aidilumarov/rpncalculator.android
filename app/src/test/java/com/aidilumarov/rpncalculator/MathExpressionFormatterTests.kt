@@ -1,21 +1,20 @@
 package com.aidilumarov.rpncalculator
 
 import org.junit.Test
-import com.aidilumarov.rpncalculator.ModelLayer.*
+import com.aidilumarov.rpncalculator.ModelLayer.core.MathExpression
+import com.aidilumarov.rpncalculator.ModelLayer.core.MathExpressionFormatter
 
 import org.junit.Assert.*
-import org.junit.experimental.theories.ParametersSuppliedBy
-import org.junit.runners.Parameterized
-
-import java.util.stream.Stream
 
 class MathExpressionFormatterTests {
 
     @Test
     fun formatExpression_isCorrect() {
 
-        var formatter = MathExpressionFormatter()
-        var mathExpression = MathExpression()
+        var formatter =
+            MathExpressionFormatter()
+        var mathExpression =
+            MathExpression()
         mathExpression.expression = "(-5.0)*5"
         var actual = formatter.formatExpression(mathExpression)
 

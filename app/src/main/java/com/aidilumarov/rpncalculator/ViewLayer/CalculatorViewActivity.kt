@@ -16,35 +16,35 @@ class CalculatorViewActivity : AppCompatActivity() {
     private lateinit var clickables: ArrayList<View>
 
     // Output views
-    public lateinit var expressionView: TextView
-    public lateinit var resultView: TextView
+    internal lateinit var expressionView: TextView
+    internal lateinit var resultView: TextView
 
     // Numeric Buttons
-    public lateinit var buttonZero: TextView
-    public lateinit var buttonOne: TextView
-    public lateinit var buttonTwo: TextView
-    public lateinit var buttonThree: TextView
-    public lateinit var buttonFour: TextView
-    public lateinit var buttonFive: TextView
-    public lateinit var buttonSix: TextView
-    public lateinit var buttonSeven: TextView
-    public lateinit var buttonEight: TextView
-    public lateinit var buttonNine: TextView
-    public lateinit var buttonPoint: TextView
+    internal lateinit var buttonZero: TextView
+    internal lateinit var buttonOne: TextView
+    internal lateinit var buttonTwo: TextView
+    internal lateinit var buttonThree: TextView
+    internal lateinit var buttonFour: TextView
+    internal lateinit var buttonFive: TextView
+    internal lateinit var buttonSix: TextView
+    internal lateinit var buttonSeven: TextView
+    internal lateinit var buttonEight: TextView
+    internal lateinit var buttonNine: TextView
+    internal lateinit var buttonPoint: TextView
 
     // Operator buttons
-    public lateinit var buttonPlus: TextView
-    public lateinit var buttonMinus: TextView
-    public lateinit var buttonMultiply: TextView
-    public lateinit var buttonDivide: TextView
-    public lateinit var buttonPower: TextView
-    public lateinit var buttonCalculate: TextView
+    internal lateinit var buttonPlus: TextView
+    internal lateinit var buttonMinus: TextView
+    internal lateinit var buttonMultiply: TextView
+    internal lateinit var buttonDivide: TextView
+    internal lateinit var buttonPower: TextView
+    internal lateinit var buttonCalculate: TextView
 
 
     // Other buttons
-    public lateinit var buttonOpenBrackets: TextView
-    public lateinit var buttonCloseBrackets: TextView
-    public lateinit var buttonClearScreen: TextView
+    internal lateinit var buttonOpenBrackets: TextView
+    internal lateinit var buttonCloseBrackets: TextView
+    internal lateinit var buttonClearScreen: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

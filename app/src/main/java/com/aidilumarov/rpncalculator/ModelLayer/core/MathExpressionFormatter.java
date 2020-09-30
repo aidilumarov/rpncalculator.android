@@ -1,4 +1,4 @@
-package com.aidilumarov.rpncalculator.ModelLayer;
+package com.aidilumarov.rpncalculator.ModelLayer.core;
 
 public class MathExpressionFormatter {
 
